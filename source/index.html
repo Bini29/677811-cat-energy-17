@@ -6,12 +6,12 @@
   </head>
   <body>
     <header class="page-header">
-      <img class="logo logo-header" src="" alt="">
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__list-item"><a href="#">главная</a></li>
-          <li class="main-nav__list-item"><a href="#">каталог продукции</a></li>
-          <li class="main-nav__list-item"><a href="#">подбор программы</a></li>
+      <a class="logo logo-header"></a>
+      <nav class="navgation">
+        <ul class="navgation__list">
+          <li class="navgation__list-item"><a href="" class="navgation__list-link" >главная</a></li>
+          <li class="navgation__list-item"><a href="catalog.html" class="navgation__list-link" >каталог продукции</a></li>
+          <li class="navgation__list-item"><a href="form.html" class="navgation__list-link" >подбор программы</a></li>
         </ul>
       </nav>
     </header>
@@ -19,10 +19,10 @@
       <section class="description-main">
         <div class="description-main__title">
           <h1 class="description-main__title-head">Функциональное питание для котов</h1>
-          <p class="description-main__title-par">Занялся собой? Займись котом!</p>
+          <p class="description-main__title-text">Занялся собой? Займись котом!</p>
         </div>
         <img  class="description-main__img" src="" alt="">
-        <button class="description-main__button button" type="button">подобрать программу</button>
+        <a href="form.html" class="description-main__button button">подобрать программу</a>
       </section>
       <section class="description-catalog">
         <article class="description-catalog__info">
@@ -60,16 +60,16 @@
       </section>
     </main>
     <footer class="footer-main">
-      <a class="logo"></a>
+      <a href="#"class="logo"></a>
       <ul class="social">
-        <li class="social__item"><a class="social_link--vk" href="#"></a></li>
-        <li class="social__item"><a class="social_link--inst" href="#"></a></li>
-        <li class="social__item"><a class="social_link--fb" href="#"></a></li>
+        <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--vk" src="" alt=""></a></li>
+        <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--inst" src="" alt=""></a></li>
+        <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--fb" src="" alt=""></a></li>
       </ul>
-      <ul class="developed">
-        <li class="developed__text"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-        <li class="developed__logo"><a href="https://htmlacademy.ru/intensive/adaptive"><img src="" alt=""></a></li>
-      </ul>
+      <a class="developed" href="">
+        <p class="developed__text">HTML Academy</p>
+        <img class="developed__image" src="" alt="">
+      </a>
     </footer>
   </body>
 </html>
