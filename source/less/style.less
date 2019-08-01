@@ -1,9 +1,23 @@
+@import "normalize.css";
+@import "variables.less";
+@import "mixins.less";
 @import "blocks/navgation.less";
 @import "blocks/description-main.less";
-@import "mixins.less";
 @import "blocks/description-catalog.less";
 @import "blocks/works.less";
 @import "blocks/footer-main.less";
-@import "blocks/catalog.less";
+@import "blocks/catalog-item.less";
 @import "blocks/catalog-more.less";
 @import "blocks/developed.less";
+
+body {
+  font-family: @use-font;
+  line-height: 18px;
+  color: @black--light;
+ }
+ a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
