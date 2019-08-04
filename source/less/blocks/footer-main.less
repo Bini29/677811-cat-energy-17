@@ -1,3 +1,26 @@
 .footer-main {
   background-color: @gray--werylight;
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.footer-main__logo {
+text-align: center;
+}
+@media (min-width: @tablet-width) {
+.footer-main {
+min-width: 708px;
+margin: 0 auto;
+flex-direction: row;
+
+ }
+}
+@media (min-width: @desktop-width) {
+.footer-main {
+min-width: 1220px;
+margin: 0 auto;
+flex-direction: row;
+ }
 }
