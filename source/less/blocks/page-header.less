@@ -2,26 +2,33 @@
 display: flex;
 flex-wrap: wrap;
 flex-direction: column;
-}
-.page-header__logo {
 margin: 0 auto;
+width: 280px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.page-header__logo {
 
 }
+
 @media (min-width: @tablet-width) {
   .page-header{
 flex-direction: row;
+width: 768px;
+padding-left: 30px;
+padding-right: 30px;
   }
   .page-header__logo {
     width: 120px;
-    margin:0 auto;
   }
-
 }
+
 @media (min-width: @desktop-width) {
 .page-header{
-flex-direction: row;
-  }
-  .page-header__logo {
-
+  width: 1300px;
+  padding-left: 40px;
+  padding-right: 40px;
+  flex-direction: row;
   }
 }

@@ -1,8 +1,8 @@
 .description-main {
   background: no-repeat;
   background-image: url("../img/index-background-mobile@1x.jpg");
-  width: 320px;
-  margin:0 auto;
+  background-position: center 0;
+  background-size: cover;
   text-align: center;
 }
 
@@ -21,27 +21,26 @@
   font-family: @use-font;
   color: @white;
 }
+
 @media (min-width: @tablet-width) {
   .description-main {
-    min-width: 486px;
-    margin:0 auto;
+    width: auto;
     background-color: #ffffff;
   }
-.navgation__list {
-  display: flex;
-  }
+
 .description-main__title-head {
   text-align: left;
   color: #111111;
 }
+
 .description-main__title-text {
   text-align: left;
   color: #111111;
   }
 }
+
 @media (min-width: @desktop-width) {
   .description-main{
-    min-width: 1200px;
-    margin:0 auto;
+    width: auto;
   }
 }

@@ -1,7 +1,6 @@
 .description-catalog__info {
   margin-top: 20px;
   margin-bottom: 20px;
-
   background-color: #f2f2f2;
 }
 
@@ -36,21 +35,28 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+
 .description-catalog {
 width: 320px;
 margin: 0 auto;
-
+display: flex;
+flex-wrap: wrap;
+padding-left: 20px;
+padding-right: 20px;
 }
+
 @media (min-width: @tablet-width) {
 .description-catalog {
-min-width: 486px;
-margin: 0 auto;
+width: 708px;
+padding-left: 30px;
+padding-right: 30px;
+ }
 }
-}
+
 @media (min-width: @desktop-width) {
 .description-catalog {
-min-width: 1200px;
-margin: 0 auto;
-display: flex;
-}
+width: 1300px;
+padding-left: 40px;
+padding-right: 40px;
+ }
 }

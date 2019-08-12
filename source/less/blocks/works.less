@@ -1,3 +1,8 @@
+.works {
+  width: 280px;
+  margin: 0 auto;
+}
+
 .works__title {
   font-weight: 700;
   font-size: 36px;
@@ -6,23 +11,24 @@
   color: @black;
   text-transform: uppercase;
 }
-.works {
-  width: 320px;
-  margin: 0 auto;
-}
+
 .works__wrapper {
   display: flex;
   flex-wrap: wrap;
 }
+
 @media (min-width: @tablet-width) {
   .works {
-    min-width: 708px;
-    margin: 0 auto;
+  width: 708px;
+  padding-left: 30px;
+  padding-right: 30px;
   }
 }
+
 @media (min-width: @desktop-width) {
   .works {
-    min-width: 1200px;
-    margin: 0 auto;
+    width: 1300px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
