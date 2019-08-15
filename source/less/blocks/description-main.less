@@ -1,6 +1,9 @@
 .description-main {
   background: no-repeat;
   background-image: url("../img/index-background-mobile@1x.jpg");
+  background-position: center 0;
+  background-size: cover;
+  text-align: center;
 }
 
 .description-main__title-head {
@@ -17,4 +20,32 @@
   line-height: 14px;
   font-family: @use-font;
   color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .description-main {
+    background-color: @white;
+  }
+
+.description-main__title-head {
+  text-align: left;
+  color: @black;
+}
+
+.description-main__title-text {
+  text-align: left;
+  color: @black;
+  }
+}
+
+ @media (min-width: @desktop-width) {
+  .description-main{
+
+  }
+  .description-main__button{
+
+  }
+  .description-main__title{
+    text-align: left;
+  }
 }

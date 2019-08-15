@@ -2,23 +2,23 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <a href="#" class="logo page-header__logo"></a>
+    <header class="page-header wrapper">
+      <a class="logo page-header__logo"><img src="img/logo-mobile.svg" alt="" width="190" height="37"></a>
       <nav class="navgation">
         <ul class="navgation__list">
           <li class="navgation__list-item"><a href="" class="navgation__list-link" >главная</a></li>
           <li class="navgation__list-item"><a href="catalog.html" class="navgation__list-link" >каталог продукции</a></li>
           <li class="navgation__list-item"><a href="form.html" class="navgation__list-link" >подбор программы</a></li>
-        </ul>
+          </ul>
       </nav>
     </header>
   <main>
-    <section class="catalog">
+    <section class="catalog wrapper">
       <h1 class="catalog__title">Каталог продукции</h1>
       <article class="catalog-item">
         <a class="catalog-item__link" href=""><h2 class="catalog-item__title">Cat Energy PRO 500 г</h2></a>
@@ -153,24 +153,26 @@
         </table>
         <a class="catalog-item__button button" href=""> заказать</a>
       </article>
-    </section>
-    <section class="catalog-more">
+      <article class="catalog-more">
       <h2 class="catalog-more__title">Показать еще 100500 товаров</h2>
       <p class="catalog-more__deck">На самом деле вкусов гораздо больше!</p>
       <a class="catalog-more__button" href="">показать всё</a>
+    </article>
     </section>
     </main>
-    <footer class="footer-main footer-main__logo">
-      <a href="#"class="logo logo-footer"></a>
-      <ul class="social">
-        <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--vk" src="" alt=""></a></li>
-        <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--inst" src="" alt=""></a></li>
-        <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--fb" src="" alt=""></a></li>
-      </ul>
-      <a class="developed" href="">
+    <footer class="footer-main">
+      <div class="footer-main__nav  wrapper">
+        <a href="#"class="logo footer-main__logo"><img src="img/logo-footer.svg" alt="" width="190" height="37"></a>
+        <ul class="social">
+          <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--vk" src="img/icon-vk.svg" alt="" width="22" height="19"></a></li>
+          <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--inst" src="img/icon-insta.svg" alt="" width="22" height="19"></a></li>
+          <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--fb" src="img/icon-fb.svg" alt="" width="22" height="19"></a></li>
+        </ul>
+        <a class="developed" href="">
         <p class="developed__text">HTML Academy</p>
         <img class="developed__image" src="" alt="">
-      </a>
+        </a>
+      </div>
     </footer>
   </body>
 </html>

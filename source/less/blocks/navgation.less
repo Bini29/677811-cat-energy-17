@@ -8,5 +8,30 @@
 }
 
 .navgation__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+
+.navgation{
+ margin-left: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .navgation__list {
+    flex-direction: row-reverse;
+
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .navgation__list {
+
+
+  }
 }

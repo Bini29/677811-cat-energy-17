@@ -1,7 +1,6 @@
 .description-catalog__info {
   margin-top: 20px;
   margin-bottom: 20px;
-
   background-color: #f2f2f2;
 }
 
@@ -35,4 +34,27 @@
   color: @black;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.description-catalog {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+@media (min-width: @tablet-width) {
+.description-catalog {
+ }
+}
+
+@media (min-width: @desktop-width) {
+.description-catalog {
+
+ }
+.description-catalog__info{
+  width: 570px;
+}
+.description-catalog__info:nth-child(1){
+ margin-right: 80px;
+}
+
 }

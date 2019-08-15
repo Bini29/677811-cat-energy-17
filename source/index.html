@@ -2,31 +2,34 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <a class="logo page-header__logo"><img src="" alt=""></a>
+    <header class="page-header wrapper">
+      <a class="logo page-header__logo"><img src="img/logo-mobile.svg" alt="" width="190" height="37"></a>
       <nav class="navgation">
         <ul class="navgation__list">
           <li class="navgation__list-item"><a href="" class="navgation__list-link" >главная</a></li>
           <li class="navgation__list-item"><a href="catalog.html" class="navgation__list-link" >каталог продукции</a></li>
           <li class="navgation__list-item"><a href="form.html" class="navgation__list-link" >подбор программы</a></li>
-        </ul>
+          </ul>
       </nav>
     </header>
     <main>
       <section class="description-main">
-        <div class="description-main__title">
-          <h1 class="description-main__title-head">Функциональное питание для котов</h1>
-          <p class="description-main__title-text">Занялся собой? Займись котом!</p>
+        <div class="wrapper" >
+          <div class="description-main__title">
+            <h1 class="description-main__title-head">Функциональное питание для котов</h1>
+            <p class="description-main__title-text">Занялся собой? Займись котом!</p>
+            <a href="form.html" class="description-main__button button">подобрать программу</a>
+          </div>
+          <img  class="description-main__img" src="img/index-can-mobile@1x.png" alt="">
+
         </div>
-        <img  class="description-main__img" src="img/index-can-mobile@1x.png" alt="">
-        <a href="form.html" class="description-main__button button">подобрать программу</a>
       </section>
-      <section class="description-catalog">
+      <section class="description-catalog wrapper">
         <article class="description-catalog__info">
           <img class="description-catalog__img"   src="" alt="">
           <h2 class="description-catalog__title">похудение</h2>
@@ -41,37 +44,37 @@
           <a class="description-catalog__button" href="">Каталог pro</a>
         </article>
       </section>
-      <section class="works">
+      <section class="works wrapper">
         <h2 class="works__title">Как это работает</h2>
-        <article class="works__item">
-          <img class="works__item-img" class="" src="" alt="">
-          <p class="works-item__desc">Функциональное питание содержит только полезные питательные вещества.</p>
-        </article>
-        <article class="works__item">
-          <img class="works__item-img" class="" src="" alt="">
-          <p class="works-item__desc">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-        </article>
-        <article class="works__item">
-          <img class="works__item-img" class="" src="" alt="">
-          <p class="works-item__desc">Замените один-два приема обычной еды на наше функциональное питание.</p>
-        </article>
-        <article class="works__items">
-          <img class="works__item-img" class="" src="" alt="">
-          <p class="works-item__desc">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-        </article>
+        <div class="works__wrapper">
+          <article class="works-item">
+            <p class="works-item__desc">Функциональное питание содержит только полезные питательные вещества.</p>
+          </article>
+          <article class="works-item">
+            <p class="works-item__desc">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+          </article>
+          <article class="works-item">
+            <p class="works-item__desc">Замените один-два приема обычной еды на наше функциональное питание.</p>
+          </article>
+          <article class="works-item">
+            <p class="works-item__desc">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          </article>
+      </div>
       </section>
     </main>
     <footer class="footer-main">
-      <a href="#"class="logo footer-main__logo"></a>
-      <ul class="social">
-        <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--vk" src="" alt=""></a></li>
-        <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--inst" src="" alt=""></a></li>
-        <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--fb" src="" alt=""></a></li>
-      </ul>
-      <a class="developed" href="">
+      <div class="footer-main__nav  wrapper">
+        <a href="#"class="logo footer-main__logo"><img src="img/logo-footer.svg" alt="" width="190" height="37"></a>
+        <ul class="social">
+          <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--vk" src="img/icon-vk.svg" alt="" width="22" height="19"></a></li>
+          <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--inst" src="img/icon-insta.svg" alt="" width="22" height="19"></a></li>
+          <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--fb" src="img/icon-fb.svg" alt="" width="22" height="19"></a></li>
+        </ul>
+        <a class="developed" href="">
         <p class="developed__text">HTML Academy</p>
         <img class="developed__image" src="" alt="">
-      </a>
+        </a>
+      </div>
     </footer>
   </body>
 </html>

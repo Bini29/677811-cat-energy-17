@@ -4,4 +4,25 @@
   line-height: 60px;
   font-family: @use-font;
   color: @black;
+  flex-basis: 100%;
+  text-align: center;
 }
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+@media (min-width: @tablet-width) {
+.catalog {
+  flex-direction: row;
+  }
+}
+
+/* @media (min-width: @desktop-width) {
+.catalog {
+  }
+}
+ */

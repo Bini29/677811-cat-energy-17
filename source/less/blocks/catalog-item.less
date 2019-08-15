@@ -1,3 +1,15 @@
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
+
+  text-align: center;
+}
+
+
 .catalog-item__title {
   font-weight: 700;
   font-size: 16px;
@@ -16,4 +28,22 @@
   font-size: 12px;
   line-height: 16px;
   font-family: @deafult-font;
+  width: 100%;
+  table-layout: fixed;
 }
+
+.catalog-item__info td {
+  word-wrap:break-word;
+}
+
+/* @media (min-width: @tablet-width) {
+.catalog-item {
+width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+.catalog-item {
+width: 245px;
+  }
+} */
