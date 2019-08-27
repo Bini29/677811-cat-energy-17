@@ -1,17 +1,32 @@
 .catalog-item {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   width: 280px;
-  margin: 0 auto;
   padding: 0;
+  padding-bottom: 25px;
+  border-bottom: 1px solid @grayst;
 
   text-align: center;
 }
 
+.catalog-item__button {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;
+}
 
+.catalog-item__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: @use-font;
+  text-transform: capitalize;
+  text-align: left;
+
+}
 .catalog-item__title {
-  font-weight: 700;
+  width: 80px;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   font-family: @use-font;
@@ -21,29 +36,72 @@
 
 .catalog-item__link {
   text-decoration: none;
+
 }
 
 .catalog-item__info {
+  width: 140px;
   border-collapse: collapse;
   font-size: 12px;
   line-height: 16px;
   font-family: @deafult-font;
-  width: 100%;
-  table-layout: fixed;
 }
 
-.catalog-item__info td {
-  word-wrap:break-word;
-}
+@media (min-width: @tablet-width) {
+  .catalog-item__title {
+    width: auto;
+    margin-bottom: 25px;
 
-/* @media (min-width: @tablet-width) {
-.catalog-item {
-width: 324px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .catalog-item {
+    width: 249px;
+    padding-left: 35px;
+    padding-right: 34px;
+    margin-bottom: 113px;
+    background-color: @gray--werylight;
+    flex-direction: column;
+    border:none;
+  &:nth-child(2n){
+     margin-right: 60px;
+   }
+  }
+
+  .catalog-item__info {
+    text-align: right;
+    margin-bottom: 35px;
+    width: 100%;
+  }
+
+  .catalog-item__text {
+    border-bottom: 1px solid @grayst ;
+    padding-bottom: 10px;
+
+    &:nth-child(2n) {
+     text-align:right;
+   }
   }
 }
+
 
 @media (min-width: @desktop-width) {
-.catalog-item {
-width: 245px;
+  .catalog-item {
+    width: 168px;
+    padding-left: 39px;
+    padding-right: 38px;
+    margin-bottom: 145px;
+    background-color: @gray--werylight;
+    flex-direction: column;
+    border:none;
+    margin-right: 80px;
+    &:nth-child(4n+1){
+     margin-right: 10px;
+   }
   }
-} */
+
+  .catalog-item__title {
+
+  }
+}

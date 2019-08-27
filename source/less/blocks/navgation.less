@@ -5,6 +5,7 @@
   font-family: @use-font;
   color: @black;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .navgation__list {
@@ -17,15 +18,105 @@
   list-style: none;
 }
 
+.navgation__list-item {
+  margin-top: 25px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid @grayst;
+  text-align: center;
+}
 
-.navgation{
- margin-left: auto;
+
+.navgation {
+ text-align: center;
+}
+
+.navgation__toggle {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  z-index: 2;
+
+  display: block;
+  width: 25px;
+  height: 25px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.navgation--closed .navgation__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: 0px;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: @black;
+  box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+}
+
+.navgation--closed .navgation__toggle:active::before {
+  box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+}
+
+.navgation--opened .navgation__toggle {
+  top: 20px;
+  right: 20px;
+  left: auto;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    left: 0px;
+
+    width: 25px;
+    height: 2px;
+
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .navgation__list {
-    flex-direction: row-reverse;
-
+    flex-direction: row;
+  }
+  .navgation{
+    margin-left: auto;
+  }
+  .navgation__list-item{
+    margin-top: 45px;
+    padding-left: 36px;
+    padding-bottom: 0px;
+    border: none;
+  }
+  .navgation__toggle{
+    display: none;
+  }
+  .navgation__list-link{
+   font-weight: 400;
+   font-size: 18px;
   }
 }
 
@@ -33,5 +124,17 @@
   .navgation__list {
 
 
+  }
+  .navgation__list-link{
+   font-size: 20px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .navgation--closed .navgation__list-item {
+    display: none;
+  }
+  .navgation--nojs .navgation__toggle {
+    display: none;
   }
 }

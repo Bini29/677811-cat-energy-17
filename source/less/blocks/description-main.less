@@ -7,45 +7,83 @@
 }
 
 .description-main__title-head {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   font-family: @use-font;
   color: @white;
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
 }
 
 .description-main__title-text {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   font-family: @use-font;
   color: @white;
+  margin-top: 30px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.description-main__button{
+  width: 280px;
+  display: block;
+  padding-bottom: 14px;
+  padding-top: 15px;
 }
 
 @media (min-width: @tablet-width) {
   .description-main {
     background-color: @white;
   }
+  .description-main__title{
+    margin-left: 80px;
+    max-width: 520px;
+    padding-top: 30px;
+  }
 
-.description-main__title-head {
-  text-align: left;
-  color: @black;
-}
+  .description-main__title-head {
+    text-align: left;
+    color: @black;
+    font-size: 60px;
+    line-height: 60px;
+  }
 
-.description-main__title-text {
-  text-align: left;
-  color: @black;
+  .description-main__title-text {
+    text-align: left;
+    color: @black;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .description-main__img{
+    display: none;
+  }
+  .description-main__button {
+    width: 244px;
+    margin-left: 80px;
+    padding-top: 18px;
+    padding-bottom: 19px;
+    font-size: 20px;
   }
 }
 
- @media (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
   .description-main{
 
   }
   .description-main__button{
-
+    margin-bottom: 188px;
   }
   .description-main__title{
     text-align: left;
+    padding-top: 90px;
+   }
+  .description-main__title-text{
+    margin-top: 35px;
+    text-transform: uppercase;
+    margin-bottom: 55px;
   }
 }

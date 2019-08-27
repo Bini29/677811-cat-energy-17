@@ -1,28 +1,82 @@
+.catalog-more{
+  padding-bottom: 25px;
+  border-bottom: 1px solid @grayst;
+}
 .catalog-more__title {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   font-family: @use-font;
   color: @black;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .catalog-more__deck {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 16px;
   font-family: @deafult-font;
   color: @black--light;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.catalog-more__img {
+  margin: 0 auto;
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .catalog-more__button {
-  font-weight: 700;
+  display: block;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  font-family: @deafult-font;
+  font-family: @use-font;
   color: @black;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
+
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;
 
   background-color: @gray--werylight;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-more {
+    width: 249px;
+    padding-left: 35px;
+    padding-right: 34px;
+    margin-bottom: 113px;
+    flex-direction: column;
+    border: 1px solid @grayst;
+  }
+  .catalog-more__img {
+    margin-top: 55px;
+    margin-bottom: 75px;
+  }
+  .catalog-more__title {
+    font-size: 20px;
+    font-height: 20px;
+  }
+  .catalog-more__deck {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 80px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-more{
+    width: 168px;
+    padding-left: 39px;
+    padding-right: 38px;
+    margin-bottom: 145px;
+    flex-direction: column;
+  }
 }

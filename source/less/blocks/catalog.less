@@ -1,11 +1,14 @@
 .catalog__title {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 36px;
   line-height: 60px;
   font-family: @use-font;
   color: @black;
-  flex-basis: 100%;
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0;
+  border-bottom: 1px solid @grayst;
 }
 
 .catalog {
@@ -19,10 +22,19 @@
 .catalog {
   flex-direction: row;
   }
-}
-
-/* @media (min-width: @desktop-width) {
-.catalog {
+.catalog__title{
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  border:none;
   }
 }
- */
+
+@media (min-width: @desktop-width) {
+.catalog{
+
+}
+.catalog__title{
+  flex-basis: 100%;
+}
+}
