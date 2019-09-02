@@ -1,5 +1,5 @@
 .works {
-
+  margin-bottom:1px;
 }
 
 .works__title {
@@ -14,22 +14,26 @@
 .works__wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 
 @media (min-width: @tablet-width) {
+  .works {
+    counter-reset: section;
+    border-bottom: 1px solid @grayst;
+    padding-bottom: 80px;
+  }
   .works__title{
     font-size: 60px;
     line-height: 60px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 70px;
   }
 }
 
 @media (min-width: @desktop-width) {
  .works__title{
-   margin-top: 80px;
-   margin-bottom: 80px;
+   margin-top: 45px;
+   margin-bottom: 73px;
  }
 }

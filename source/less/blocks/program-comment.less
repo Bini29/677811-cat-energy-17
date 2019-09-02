@@ -1,0 +1,40 @@
+.program-comment {
+  border:none;
+  padding: 0px;
+}
+
+.program-comment__title {
+  position: relative;
+  &:after{
+    content:"";
+    position: absolute;
+    width: 99px;
+    height: 3px;
+    background-color: @green;
+    top:15px;
+    left: 200px;
+  }
+}
+
+.program-comment__textarea {
+  width: 278px;
+  border: 1px solid @grayst;
+  padding: 14px 13px;
+  height: 151px;
+  font-family: @use-font;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .program-comment__textarea {
+    width: 600px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+ .program-comment__textarea {
+  width: 1194px;
+ }
+}

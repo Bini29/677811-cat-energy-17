@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-.description-catalog__img {
+.description-catalog__icon {
   position: absolute;
   top: 24px;
 
@@ -30,17 +30,44 @@
   background-color: #68b738;
   background-position: center;
   border-radius: 50%;
+}
+.description-catalog__info {
 
+&::before {
+content:"";
+position: absolute;
+top: 25px;
+left: 22px;
 
- /*  &::before {
- content: url(../img/icon-cat-slim.svg);
- position: absolute;
- top: 0;
- left: 9px;
+width: 50px;
+height: 50px;
+background-color: #68b738;
+border-radius: 50%;
+ }
+}
+.description-catalog__info--slim {
+  &::after {
+    content:"";
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    width: 35px;
+    height: 49px;
+    background-image: url(../img/icon-cat-slim.svg);
 
- width: 36px;
- height: 36px;
- } */
+ }
+}
+.description-catalog__info--pro {
+  &::after {
+    content:"";
+    position: absolute;
+    top: 25px;
+    left: 22px;
+    width: 67px;
+    height: 28px;
+    background-image: url(../img/icon-cat-pro.svg);
+
+ }
 }
 
 .description-catalog__desc {
@@ -56,8 +83,8 @@
 
 .description-catalog__button {
   position: relative;
-  margin-bottom: 60px;
-  margin-top: 24px;
+  margin-bottom: 23px;
+  margin-top: 6px;
   color: @black;
   font-family: @use-font;
   font-weight: 400;
@@ -69,6 +96,8 @@
   &::after {
     content: "";
     position: absolute;
+    top: 2px;
+    left: 95px;
     width: 30px;
     height: 12px;
     background: url(../img/icon-right-arrow-verylong.svg) no-repeat center;
@@ -85,59 +114,137 @@
   .description-catalog {
 
   }
-  .description-catalog__title{
+  .description-catalog__title {
     text-align: left;
     font-size: 36px;
     line-height: 37px;
-    margin-left: 0;
-    margin-top: 80px;
-    margin-bottom: 16px;
+    margin-left: 4px;
+    margin-top: 76px;
+    margin-bottom: 9px;
   }
+
   .description-catalog__info{
     flex-wrap: wrap;
     flex-direction: column;
     width: 708px;
     padding-left: 50px;
     padding-right: 50px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+
+    &::before {
+      content:"";
+      position: absolute;
+      top: 90px;
+      left: 445px;
+
+      width: 200px;
+      height: 200px;
+    }
   }
-  .description-catalog__desc{
-    width: 380px;
+
+  .description-catalog__desc {
+    width: 340px;
     font-size: 16px;
     line-height: 24px;
     border: none;
+    padding-bottom: 0;
+    margin-bottom: 50px;
   }
-  .description-catalog__img{
+
+  .description-catalog__icon {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     top: 80px;
     right: 60px;
   }
-  .description-catalog__button{
+
+  .description-catalog__button {
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: 60px;
+  }
+
+  .description-catalog__info--slim {
+    &::after {
+      top: 80px;
+      left: 475px;
+      width: 140px;
+      height: 194px;
+      background-image: url(../img/icon-cat-slim.svg);
+    }
+  }
+
+  .description-catalog__info--pro {
+    &::after {
+      top: 135px;
+      left: 410px;
+      width: 268px;
+      height: 112px;
+      background-image: url(../img/icon-cat-pro.svg);
+    }
   }
 }
-
 @media (min-width: @desktop-width) {
   .description-catalog {
     justify-content: space-between;
   }
-  .description-catalog__info{
+
+  .description-catalog__info {
     width: 470px;
+    &::before {
+      content:"";
+      position: absolute;
+      top: 45px;
+      left: 55px;
+
+      width: 100px;
+      height: 100px;
+    }
   }
-  .description-catalog__title{
-    text-align: center;
-    margin-bottom: 75px;
+
+  .description-catalog__title {
+    text-align: left;
+    margin-bottom: 55px;
+    margin-left: 168px;
   }
-  .description-catalog__img{
+
+  .description-catalog__icon {
     width: 90px;
     height: 90px;
     border-radius: 50%;
     top: 50px;
     left: 50px;
   }
- .description-catalog__desc{
+
+ .description-catalog__desc {
   width: 100%;
+  margin-bottom: 25px;
  }
+
+ .description-catalog__svg {
+    width: 70px;
+    height: 97px;
+  }
+
+  .description-catalog__info--slim {
+    &::after {
+      top: 37px;
+      left: 70px;
+      width: 70px;
+      height: 97px;
+      background-image: url(../img/icon-cat-slim.svg);
+    }
+  }
+
+  .description-catalog__info--pro {
+    &::after {
+      top: 66px;
+      left: 38px;
+      width: 134px;
+      height: 56px;
+      background-image: url(../img/icon-cat-pro.svg);
+    }
+  }
 }

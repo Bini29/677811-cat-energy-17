@@ -1,6 +1,16 @@
 .example {
   position: relative;
   z-index: 1;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 102%;
+    width: 100%;
+    background-color: @gray--werylight;
+    z-index: -1;
+  }
 }
 
 .example__title{
@@ -9,8 +19,8 @@
   line-height: 60px;
   font-family: @use-font;
   color: @black;
-  padding-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 5px;
+  margin-bottom: 24px;
 }
 
 .example__text{
@@ -19,83 +29,55 @@
   line-height: 18px;
   font-family: @deafult-font;
   color: @black;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  text-align: left;
+  padding-right: 5px;
 }
 
-.example__title-cat{
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  font-family: @use-font;
-  color: @black;
-  text-transform: uppercase;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin: 0 auto;
-}
+
 
 @media (min-width: @tablet-width) {
   .example {
-    background-color: @white;
     &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
     height: 82%;
     width: 100%;
-    background-color: @gray--werylight;
-    z-index: -1;
+   }
   }
-  }
-  .example__title-cat {
-  width: 190px;
-  margin-top: 30px;
-  margin-right: 0;
-  margin-bottom: 30px;
-
-  font-size: 20px;
-  line-height: 30px;
-  text-align: right;
-}
-
 
   .example__title {
-  margin-bottom: 50px;
-  padding-top: 50px;
-
-  font-size: 60px;
-  line-height: 60px;
-}
+    margin-top: 40px;
+    margin-bottom: 65px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 
 
   .example__text {
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 
-  font-size: 16px;
-  line-height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
-}
 
 @media (min-width: @desktop-width) {
   .example {
     &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 82%;
-    width: 100%;
-    background-color: @gray--werylight;
-    z-index: -1;
+      height: 75%;
+      width: 100%;
   }
 }
  .example__text {
-  width: 440px;
+    width: 431px;
+    margin-top: 143px;
+    margin-bottom: 65px;
  }
- .example__title{
+
+ .example__title {
   padding-top: 0px;
-  margin-top: 50px;
+  margin-top: 20px;
  }
+
+
 }

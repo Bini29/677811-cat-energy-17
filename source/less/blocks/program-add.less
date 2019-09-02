@@ -1,0 +1,82 @@
+.program-add {
+  border:none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.program-add__title {
+
+}
+.program-add__label{
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 25px;
+}
+
+.program-add__input {
+
+  border: 1px solid #e6e6e6;
+  padding: 13px 15px;
+  font-family: @use-font;
+  text-transform: uppercase;
+  color: @black;
+  font-size: 16px;
+  line-height: 18px;
+
+  & + label::before {
+  content: "";
+  position: absolute;
+  left:0px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @grayst;
+  }
+
+  &:checked + label::after {
+  content: url(../img/icon-tick.svg);
+  left: 10px;
+  position: absolute;
+  width: 22px;
+  height: 12px;
+  top: 7px;
+  left: 7px;
+  fill: @green;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .program-add__table {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+  & li {
+    width: 50%;
+    margin-bottom: 30px;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .program-add {
+    flex-basis: 100%;
+  }
+
+  .program-add__table {
+
+    & li {
+    width: 245px;
+    margin-bottom: 30px;
+    }
+  }
+    .program-add__table li{
+
+    &:nth-child(1n) {
+      margin-right: auto;
+    }
+  }
+}
+
