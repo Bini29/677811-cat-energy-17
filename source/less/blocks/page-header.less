@@ -1,23 +1,52 @@
 .page-header {
- display: flex;
- flex-wrap: wrap;
- flex-direction: column;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-bottom: 1px solid @grayst;
 }
 
 .page-header__logo {
+  margin-bottom: 13px;
+  margin-top: 13px;
 
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.4;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
-   flex-direction: row;
+    flex-direction: row;
+    margin: 0 auto;
+    border:none;
   }
-
   .page-header__logo {
+    width: 173px;
+    margin-top: 25px;
+    margin-left: 1px;
+
+    border: none;
   }
 }
 
 @media (min-width: @desktop-width) {
-.page-header {
+  .page-header {
+    width: 1220px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .page-header__logo {
+    width: 202px;
+    margin-top: 0;
+    margin-top: 55px;
+    margin-left: 10px;
+
+    border: none;
   }
 }

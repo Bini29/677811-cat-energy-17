@@ -1,60 +1,275 @@
 .description-catalog__info {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 20px;
-  margin-bottom: 20px;
-  background-color: #f2f2f2;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: @gray--werylight;
 }
 
 .description-catalog__title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 37px;
+  margin-top: 29px;
+  margin-left: 70px;
+
   font-family: @use-font;
   color: @black;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-align: center;
   text-transform: uppercase;
+}
+
+.description-catalog__icon {
+  position: absolute;
+  top: 24px;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: @green;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.description-catalog__info {
+
+  &::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 22px;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: @green;
+  border-radius: 50%;
+  }
+}
+
+.description-catalog__info--slim {
+
+  &::after {
+    content:"";
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    width: 35px;
+    height: 49px;
+    background-image: url(../img/icon-cat-slim.svg);
+  }
+}
+
+.description-catalog__info--pro {
+
+  &::after {
+    content:"";
+    position: absolute;
+    top: 36px;
+    left: 12px;
+    width: 67px;
+    height: 28px;
+    background-image: url(../img/icon-cat-pro.svg);
+  }
 }
 
 .description-catalog__desc {
-  padding-bottom: 20px;
+  font-family: @deafult-font;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  font-family: @deafult-font;
   color: @black--light;
 
-  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 20px;
+  border-bottom: 1px solid @grayst;
 }
 
 .description-catalog__button {
-  padding-bottom: 15px;
+  position: relative;
+  margin-bottom: 23px;
+  margin-top: 6px;
 
-  font-weight: 700;
+  font-family: @use-font;
+  font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  font-family: @use-font;
   color: @black;
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.4;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 95px;
+    width: 30px;
+    height: 12px;
+    background: url(../img/icon-right-arrow-verylong.svg) no-repeat center;
+  }
+
 }
 
 .description-catalog {
- display: flex;
- flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media (min-width: @tablet-width) {
-.description-catalog {
- }
+  .description-catalog {
+
+  }
+  .description-catalog__title {
+    margin-top: 76px;
+    margin-bottom: 9px;
+    margin-left: 4px;
+
+    font-size: 36px;
+    line-height: 37px;
+    text-align: left;
+  }
+
+  .description-catalog__info {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 708px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+
+    &::before {
+      content:"";
+      position: absolute;
+      top: 90px;
+      left: 445px;
+
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .description-catalog__desc {
+    width: 340px;
+    margin-bottom: 50px;
+    padding-bottom: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    border: none;
+  }
+
+  .description-catalog__icon {
+    top: 80px;
+    right: 60px;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+  }
+
+  .description-catalog__button {
+    margin-bottom: 60px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .description-catalog__info--slim {
+    &::after {
+      top: 80px;
+      left: 475px;
+      width: 140px;
+      height: 194px;
+      background-image: url(../img/icon-cat-slim.svg);
+    }
+  }
+
+  .description-catalog__info--pro {
+    &::after {
+      top: 135px;
+      left: 410px;
+      width: 268px;
+      height: 112px;
+      background-image: url(../img/icon-cat-pro.svg);
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
-.description-catalog {
+  .description-catalog {
+    justify-content: space-between;
+  }
 
- }
-.description-catalog__info{
-  width: 570px;
-}
-.description-catalog__info:nth-child(1){
- margin-right: 80px;
-}
+  .description-catalog__info {
+    width: 470px;
+    &::before {
+      content:"";
+      position: absolute;
+      top: 45px;
+      left: 55px;
 
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .description-catalog__title {
+    margin-bottom: 55px;
+    margin-left: 168px;
+
+    text-align: left;
+  }
+
+  .description-catalog__icon {
+    top: 50px;
+    left: 50px;
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+  }
+
+  .description-catalog__desc {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .description-catalog__svg {
+    width: 70px;
+    height: 97px;
+  }
+
+  .description-catalog__info--slim {
+    &::after {
+      top: 37px;
+      left: 70px;
+      width: 70px;
+      height: 97px;
+      background-image: url(../img/icon-cat-slim.svg);
+    }
+  }
+
+  .description-catalog__info--pro {
+    &::after {
+      top: 66px;
+      left: 38px;
+      width: 134px;
+      height: 56px;
+      background-image: url(../img/icon-cat-pro.svg);
+    }
+  }
 }

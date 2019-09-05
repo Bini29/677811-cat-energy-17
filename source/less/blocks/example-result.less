@@ -1,0 +1,129 @@
+.example-result {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.example-result__item {
+  width: 122px;
+
+  border: 1px solid @grayst;
+  border-radius: 5px;
+
+  &:nth-child(1) {
+    margin-right: 32px;
+  }
+}
+
+.example-result__title {
+  display: block;
+  margin-top: 15px;
+
+  font-family: @use-font;
+  color: @black;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.example-result__text {
+  display: block;
+  width: 88px;
+  margin: 0 auto;
+  margin-top: 9px;
+  margin-bottom: -15px;
+
+  font-family: @deafult-font;
+  color: @black;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+
+  background-color:@gray--werylight;
+
+  &:nth-child(2) {
+  width: 60px;
+  }
+}
+
+.example-result__exp {
+  margin: 0 auto;
+  margin-top: 33px;
+  margin-bottom: 38px;
+
+  font-family: @use-font;
+  color: @black;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .example-result {
+    margin-bottom: 65px;
+  }
+
+  .example-result__title {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example-result__text {
+    width: 140px;
+
+    margin-top: 15px;
+    margin-bottom: -13px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    &:nth-child(2) {
+      width: 140px;
+    }
+  }
+
+  .example-result__item {
+    width: 166px;
+    margin-bottom: 15px;
+  }
+
+  .example-result__exp {
+    width: 190px;
+    margin-top: 7px;
+    margin-right: 0;
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example-result {
+    display: flex;
+    width: 430px;
+
+    margin-bottom: 0px;
+    padding-bottom: 65px;
+
+
+    flex-wrap: wrap;
+    background-color: @gray--werylight;
+  }
+
+  .example-result__exp {
+    width: 100%;
+    margin: 0;
+    margin-top: 45px;
+
+    text-align: left;
+  }
+
+  .example-result__prise {
+    margin-left: 65px;
+  }
+}

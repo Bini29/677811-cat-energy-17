@@ -1,5 +1,5 @@
 .button {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   font-family: @use-font;
@@ -7,6 +7,30 @@
   text-transform: uppercase;
   text-decoration: none;
   background-color: @green;
+  border: none;
+  &:hover {
+    background-color:@green--darker;
+  }
+  &:active {
+    background-color:@green--darker;
+    color: @green--dark;
+  }
+}
+.program-text{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: @use-font;
+  color: @black;
+  text-transform: uppercase;
+}
+.program-title {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: @use-font;
+  color: @black;
 }
 
 .wrapper {
@@ -14,6 +38,23 @@
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
@@ -23,6 +64,16 @@
     padding-right: 30px;
     padding-left: 30px;
   }
+
+  .program-title {
+  font-size: 36px;
+  line-height: 36px;
+  }
+
+  .active-link {
+    padding-bottom: 5px;
+    border-bottom:2px solid @green;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -31,5 +82,29 @@
     padding-left: 40px;
     padding-right: 40px;
   }
+
+  .active-link {
+    padding-bottom: 10px;
+    border-bottom:2px solid @white;
+  }
+  .active-link--green {
+    padding-bottom: 6px;
+    border-bottom:2px solid @green;
+  }
 }
 
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

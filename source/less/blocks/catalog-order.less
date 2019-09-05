@@ -1,0 +1,165 @@
+.catalog-order {
+  border-bottom:  1px solid @grayst;
+
+  &:nth-child(1) {
+    border-top:1px solid @grayst;
+  }
+}
+
+.catalog-order__item {
+  margin-top: 13px;
+  margin-bottom: 10px;
+
+  font-family: @use-font;
+  color: @black;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.catalog-order__desk {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-order__text {
+  display: block;
+  padding: 0px;
+
+  font-family: @deafult-font;
+  color: @black;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+
+
+  &:nth-child(2n-1) {
+    margin-right:auto;
+  }
+}
+
+.catalog-order__button {
+  display: block;
+  width: 280px;
+
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 18px;
+  margin-top: 13px;
+
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-order {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-left: 38px;
+    padding-right: 36px;
+
+    border-top:1px solid @grayst;
+    border-left:1px solid @grayst;
+    border-right:1px solid @grayst;
+    border-bottom:0px solid @grayst;
+  }
+
+  .catalog-order__item {
+    width: 316px;
+
+    margin-top: 27px;
+    margin-bottom: 14px;
+    margin-right: auto;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .catalog-order__desk {
+    width: 227px;
+
+    margin-top: 14px;
+    margin-bottom: 0px;
+  }
+
+  .catalog-order__button {
+    width: 632px;
+
+    margin-bottom: 26px;
+    margin-top: 6px;
+  }
+
+  .catalog-order__text {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+
+    &:nth-child(2n) {
+      width: 95px;
+
+      text-align: right;
+    }
+
+    &:nth-child(2n-1) {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .catalog-order {
+    width: 895px;
+
+    justify-content: space-between;
+
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .catalog-order__item {
+    width: 245px;
+
+    margin-top: 23px;
+    margin-left: 0px;
+  }
+
+  .catalog-order__desk {
+    width: 285px;
+
+    margin-top: 9px;
+    margin-right: 40px;
+  }
+
+  .catalog-order__button {
+    width: 245px;
+
+    margin-bottom: 19px;
+    padding-bottom: 10px;
+    padding-top: 11px;
+    margin-top: 10px;
+  }
+
+  .catalog-order__text {
+
+    &:nth-child(2n) {
+      width: 45px;
+      text-align: left;
+    }
+
+    &:nth-child(2n-1) {
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
+}

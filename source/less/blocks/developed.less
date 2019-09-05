@@ -1,11 +1,36 @@
 .developed__text {
+  margin-top: 25px;
+
+  font-family: @deafult-font;
+  color: @black;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  font-family: @deafult-font;
-  color: @black;
 }
 
 .developed {
+  display: flex;
+  justify-content: space-between;
+
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .developed {
+
+  }
+
+  .developed__text {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .developed {
+
+  }
+
+  .developed__text {
+
+  }
 }

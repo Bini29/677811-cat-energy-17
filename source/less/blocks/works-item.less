@@ -1,22 +1,157 @@
+.works-item {
+  position: relative;
+
+  display: flex;
+  margin-bottom: 26px;
+
+  &:before {
+    content: "";
+    position: absolute;
+
+    display: block;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+
+    background-color: @green;
+    background-size: 50px;
+  }
+}
+
 .works-item__desc {
+  margin: 0;
+  margin-left: 80px;
+
+  font-family: @deafult-font;
+  color: @black--light;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  font-family: @deafult-font;
-  color: @black--light;
 }
 
 .works-item__desc{
+
 }
+
+.works-item--useful {
+
+  &:before {
+    position: absolute;
+    background-image: url(../img/advantage-leaf@1x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/advantage-leaf@2x.png");
+    }
+  }
+}
+
+.works-item--powder {
+
+  &:before {
+    position: absolute;
+    background-image: url(../img/advantage-powder@1x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/advantage-powder@2x.png");
+    }
+  }
+}
+
+.works-item--food {
+
+  &:before {
+    position: absolute;
+    background-image: url(../img/advantage-dining@1x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/advantage-dining@2x.png");
+    }
+  }
+}
+
+.works-item--time {
+  &:before {
+    position: absolute;
+    background-image: url(../img/advantage-clock@1x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/advantage-clock@2x.png");
+    }
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .works-item {
-    width: 245px;
+    position: relative;
+
+    flex-direction: column;
+    width: 324px;
+
+    &:after {
+      counter-increment: section;
+      content: counter(section) "";
+      position: absolute;
+      left: 125px;
+      top: -38px;
+      font-family: @deafult-font;
+      font-size: 280px;
+      line-height: 1;
+      color: @gray--werylight;
+      z-index: -1;
+    }
+
+    &:before {
+      width: 80px;
+      height: 80px;
+      background-color: @green;
+      background-size: 50px;
+    }
+
+    &:nth-child(1n+3),
+    &:nth-child(4n) {
+      margin-top: 112px;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 30px;
+    }
+  }
+
+  .works-item__desc {
+    width: 250px;
+    margin-top: 113px;
+    margin-left: 0;
+
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .works-item {
+    width: 245px;
+    margin-right: auto;
 
+    &:nth-child(4n) {
+      margin-right: 0px;
+    }
+
+    &:nth-child(1n+3),
+    &:nth-child(4n) {
+      margin-top: 0px;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 0px;
+    }
   }
 }
