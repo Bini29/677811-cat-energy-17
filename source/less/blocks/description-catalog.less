@@ -1,23 +1,26 @@
 .description-catalog__info {
   position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 20px;
   padding-right: 20px;
   padding-left: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #f2f2f2;
+
+  background-color: @gray--werylight;
 }
 
 .description-catalog__title {
+  margin-top: 29px;
+  margin-left: 70px;
+
+  font-family: @use-font;
+  color: @black;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
-  margin-left: 70px;
-  margin-top: 29px;
-  font-family: @use-font;
-  color: @black;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .description-catalog__icon {
@@ -27,25 +30,29 @@
   width: 50px;
   height: 50px;
 
-  background-color: #68b738;
+  background-color: @green;
   background-position: center;
   border-radius: 50%;
 }
+
 .description-catalog__info {
 
-&::before {
-content:"";
-position: absolute;
-top: 25px;
-left: 22px;
+  &::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 22px;
 
-width: 50px;
-height: 50px;
-background-color: #68b738;
-border-radius: 50%;
- }
+  width: 50px;
+  height: 50px;
+
+  background-color: @green;
+  border-radius: 50%;
+  }
 }
+
 .description-catalog__info--slim {
+
   &::after {
     content:"";
     position: absolute;
@@ -54,27 +61,27 @@ border-radius: 50%;
     width: 35px;
     height: 49px;
     background-image: url(../img/icon-cat-slim.svg);
-
- }
+  }
 }
+
 .description-catalog__info--pro {
+
   &::after {
     content:"";
     position: absolute;
-    top: 25px;
-    left: 22px;
+    top: 36px;
+    left: 12px;
     width: 67px;
     height: 28px;
     background-image: url(../img/icon-cat-pro.svg);
-
- }
+  }
 }
 
 .description-catalog__desc {
+  font-family: @deafult-font;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  font-family: @deafult-font;
   color: @black--light;
 
   padding-bottom: 20px;
@@ -85,13 +92,21 @@ border-radius: 50%;
   position: relative;
   margin-bottom: 23px;
   margin-top: 6px;
-  color: @black;
+
   font-family: @use-font;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+  color: @black;
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.4;
+  }
 
   &::after {
     content: "";
@@ -106,8 +121,8 @@ border-radius: 50%;
 }
 
 .description-catalog {
- display: flex;
- flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media (min-width: @tablet-width) {
@@ -115,22 +130,23 @@ border-radius: 50%;
 
   }
   .description-catalog__title {
-    text-align: left;
-    font-size: 36px;
-    line-height: 37px;
-    margin-left: 4px;
     margin-top: 76px;
     margin-bottom: 9px;
+    margin-left: 4px;
+
+    font-size: 36px;
+    line-height: 37px;
+    text-align: left;
   }
 
-  .description-catalog__info{
-    flex-wrap: wrap;
+  .description-catalog__info {
     flex-direction: column;
+    flex-wrap: wrap;
     width: 708px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
 
     &::before {
       content:"";
@@ -145,25 +161,30 @@ border-radius: 50%;
 
   .description-catalog__desc {
     width: 340px;
+    margin-bottom: 50px;
+    padding-bottom: 0;
+
     font-size: 16px;
     line-height: 24px;
+
     border: none;
-    padding-bottom: 0;
-    margin-bottom: 50px;
   }
 
   .description-catalog__icon {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
     top: 80px;
     right: 60px;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
   }
 
   .description-catalog__button {
+    margin-bottom: 60px;
+
     font-size: 20px;
     line-height: 20px;
-    margin-bottom: 60px;
   }
 
   .description-catalog__info--slim {
@@ -186,6 +207,7 @@ border-radius: 50%;
     }
   }
 }
+
 @media (min-width: @desktop-width) {
   .description-catalog {
     justify-content: space-between;
@@ -205,25 +227,28 @@ border-radius: 50%;
   }
 
   .description-catalog__title {
-    text-align: left;
     margin-bottom: 55px;
     margin-left: 168px;
+
+    text-align: left;
   }
 
   .description-catalog__icon {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
     top: 50px;
     left: 50px;
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
   }
 
- .description-catalog__desc {
-  width: 100%;
-  margin-bottom: 25px;
- }
+  .description-catalog__desc {
+    width: 100%;
+    margin-bottom: 25px;
+  }
 
- .description-catalog__svg {
+  .description-catalog__svg {
     width: 70px;
     height: 97px;
   }

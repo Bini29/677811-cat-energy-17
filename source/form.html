@@ -8,14 +8,21 @@
   </head>
   <body>
     <header class="page-header wrapper">
-      <a class="logo page-header__logo"><img src="img/logo-mobile.svg" alt="" width="190" height="37"></a>
+      <a class="logo page-header__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" alt="Кет энерджи" width="190" height="37">
+        </picture>
+      </a>
       <nav class="navgation navgation--opened navgation--nojs">
         <button class="navgation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="navgation__list">
-          <li class="navgation__list-item"><a href="index.html" class="navgation__list-link" >главная</a></li>
-          <li class="navgation__list-item"><a href="catalog.html" class="navgation__list-link" >каталог продукции</a></li>
-          <li class="navgation__list-item"><a href="form.html" class="navgation__list-link active-link" >подбор программы</a></li>
-          </ul>
+          <li><a href="index.html" class="navgation__list-link
+            navgation__list-link--black" >главная</a></li>
+          <li><a href="catalog.html" class="navgation__list-link navgation__list-link--black  " >каталог продукции</a></li>
+          <li><a href="form.html" class="navgation__list-link navgation__list-link--black active-link active-link--green" >подбор программы</a></li>
+        </ul>
       </nav>
     </header>
     <main>
@@ -23,18 +30,21 @@
         <h1 class="program-select__title">Подбор программы</h1>
         <p class="program-select__text">Заполните анкету и мы подберем<br>программу питания для вашего кота</p>
         <form class="program-select__form" method="get" action="https://echo.htmlacademy.ru">
-          <div class="program-cat-info">
-            <label class="program-cat-info__info" for="name"><span class="program-cat-info__text program-text">Имя:*</span>
-            <input class="program-cat-info__input" id="name" type="text" placeholder="Барсик">
+          <fieldset class="program-cat-info">
+            <label class="program-cat-info__info" for="name">
+              <span class="program-cat-info__text program-text">Имя:*</span>
+              <input class="program-cat-info__input" id="name" type="text" placeholder="Барсик">
             </label>
-            <label class="program-cat-info__info" for="program-select__input"><span class="program-cat-info__text program-text">Вес (кг):*</span>
-              <input class="program-cat-info__input" type="text" placeholder="7">
+            <label class="program-cat-info__info" for="program-select__input">
+              <span class="program-cat-info__text program-text">Вес (кг):*</span>
+              <input class="program-cat-info__input" type="number" type="text" placeholder="7">
             </label>
-            <label class="program-cat-info__info" for="program-select__input"><span class="program-cat-info__text program-text">Возраст (лет):</span>
-              <input class="program-cat-info__input" type="text" placeholder="7">
+            <label class="program-cat-info__info" for="program-select__input">
+              <span class="program-cat-info__text program-text">Возраст (лет):</span>
+              <input class="program-cat-info__input" type="number" type="text" placeholder="7">
             </label>
-          </div>
-          <div class="program-choice">
+          </fieldset>
+          <fieldset class="program-choice">
             <input class="program-choice__input visually-hidden" type="radio" name="choice"  id="wei" value="choice-wei" checked>
             <label class="program-choice__label" for="wei">
             <span class="program-choice__text program-text">Похудение</span></label>
@@ -44,15 +54,14 @@
             <input class="program-choice__input visually-hidden" type="radio" name="choice" id="noknw" value="choice-noknow">
             <label class="program-choice__label" for="noknw">
             <span class="program-choice__text program-text">Не знаю (Нужен ваш совет)</span></label>
-          </div>
-          <div class="program-contact">
+          </fieldset>
+          <fieldset class="program-contact">
             <h2 class="program-contact__title program-title">Контактные данные (владельца кота)</h2>
-            <label class="program-contact__label" for="email"><span class="program-contact__text program-text">E-mail:*</span>
-            <input class="program-contact__input" type="text" id="email"  placeholder="kuklachev@gmail.com">
+            <label class="program-contact__label program-contact__label--email" for="email"><span class="program-contact__text program-text">E-mail:*</span>
+            <input class="program-contact__input " type="email" id="email"  placeholder="kuklachev@gmail.com">
             </label>
-            <label class="program-contact__label" for="mob"><span class="program-contact__text program-text">Телефон:*</span>
-            <input class="program-contact__input" type="text" id="mob"  placeholder="8 (960) 900-60-90">
-            </div>
+            <label class="program-contact__label program-contact__label--mob" for="mob"><span class="program-contact__text program-text">Телефон:*</span>
+            <input class="program-contact__input " type="number" id="mob"  placeholder="8 (960) 900-60-90">
           </fieldset>
           <fieldset class="program-comment">
             <h2 class="program-comment__title program-title">Комментарий</h2>
@@ -60,41 +69,46 @@
           </fieldset>
           <fieldset class="program-add">
             <h2 class="program-add__title program-title">Дополнительно</h2>
-            <ul class="program-add__table">
-            <li><input class="program-add__input visually-hidden" type="radio" name="add" id="shug" value="add-shug" checked>
-            <label class="program-add__label" for="shug"><span class="program-add__text program-text">Сахарозаменитель</span></label></li>
-            <li><input class="program-add__input visually-hidden " type="checkbox" name="add" id="water" value="add-water">
-            <label class="program-add__label" for="water"><span class="program-add__text program-text" >Питьевая вода</span></label></li>
-            <li><input class="program-add__input visually-hidden" type="checkbox" name="add" id="milk" value="add-milk">
-            <label class="program-add__label" for="milk"><span class="program-add__text program-text">Молоко</span></label></li>
-            <li><input class="program-add__input visually-hidden" type="checkbox" name="add" id="vitam" value="add-vitam">
-            <label class="program-add__label"  for="vitam"><span class="program-add__text program-text">Витамины</span></label></li>
-          </ul>
+            <div class="program-add__list">
+              <input class="program-add__input visually-hidden" type="radio" name="add" id="shug" value="add-shug" checked>
+              <label class="program-add__label" for="shug"><span class="program-add__text program-text">Сахарозаменитель</span></label>
+              <input class="program-add__input visually-hidden " type="checkbox" name="add" id="water" value="add-water">
+              <label class="program-add__label" for="water"><span class="program-add__text program-text" >Питьевая вода</span></label>
+              <input class="program-add__input visually-hidden" type="checkbox" name="add" id="milk" value="add-milk">
+              <label class="program-add__label" for="milk"><span class="program-add__text program-text">Молоко</span></label>
+              <input class="program-add__input visually-hidden" type="checkbox" name="add" id="vitam" value="add-vitam">
+              <label class="program-add__label"  for="vitam"><span class="program-add__text program-text">Витамины</span></label>
+            </div>
           </fieldset>
-          <button class="program-select__button button" type="submmit">Отправить заявку</button>
+          <div class="program-select__send">
+            <button class="program-select__button button" type="submmit">Отправить заявку</button>
+            <p class="program-select__field">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
-      <section class="main-map">
-        <div class="main-map__info">
-          <h2 class="main-map__title">приглашаем  к сотрудничеству  дилеров!</h2>
-          <p class="main-map__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <section class="main-map wrapper">
+        <div class="  main-map__info">
+          <h2 class="main-map__title">приглашаем<br>к сотрудничеству дилеров!</h2>
+          <p class="main-map__adress">ул. Большая Конюшенная, д. 19/8
+            <span class="main-map__city">Санкт-Петербург
+          </p>
         </div>
-        <div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1567016613454!5m2!1sru!2sru" width="100%" height="345px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        </div>
+      </section>
+      <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1567016613454!5m2!1sru!2sru" width="100%" height="365px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </section>
     </main>
     <footer class="footer-main">
       <div class="footer-main__nav  wrapper">
-        <a href="#"class="logo footer-main__logo"><img src="img/logo-footer.svg" alt="" width="190" height="37"></a>
+        <a href="#"class="logo footer-main__logo"><img src="img/logo-footer.svg" alt="" width="128" height="24"></a>
         <ul class="social">
-          <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--vk" src="img/icon-vk.svg" alt="" width="22" height="19"></a></li>
-          <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--inst" src="img/icon-insta.svg" alt="" width="22" height="19"></a></li>
-          <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--fb" src="img/icon-fb.svg" alt="" width="22" height="19"></a></li>
+          <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--vk" src="img/icon-vk.svg" alt="" width="22" height="12"></a></li>
+          <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--inst" src="img/icon-insta.svg" alt="" width="16" height="16"></a></li>
+          <li class="social__item"><a class="social__link" href="#"><img class="social-icon social-icon--fb" src="img/icon-fb.svg" alt="" width="10" height="19"></a></li>
         </ul>
         <a class="developed" href="">
         <p class="developed__text">HTML Academy</p>
-        <img class="developed__image" src="" alt="">
+        <img class="developed__image" src="img/htmlacademy.svg" width="27" height="34" alt="logoHTML">
         </a>
       </div>
     </footer>

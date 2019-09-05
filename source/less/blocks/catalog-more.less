@@ -1,51 +1,65 @@
-.catalog-more{
+.catalog-more {
   padding-bottom: 25px;
   border-bottom: 1px solid @grayst;
 }
+
 .catalog-more__title {
+  margin-bottom: -5px;
+
+  font-family: @use-font;
+  color: @black;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  font-family: @use-font;
-  color: @black;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: -5px;
 }
 
 .catalog-more__deck {
+  margin-bottom: 20px;
+
+  font-family: @deafult-font;
+  color: @black--light;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  font-family: @deafult-font;
-  color: @black--light;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .catalog-more__img {
-  margin: 0 auto;
   display: block;
+  margin: 0 auto;
+
   margin-top: 25px;
   margin-bottom: 25px;
 }
 
 .catalog-more__button {
   display: block;
+  width: 100%;
+
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  font-family: @use-font;
+  color: @black;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  font-family: @use-font;
-  color: @black;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
 
-  padding-bottom: 10px;
-  padding-top: 10px;
-  width: 100%;
-
   background-color: @gray--werylight;
+
+  &:hover {
+    background-color:@gray--light;
+  }
+
+  &:active {
+    opacity: 0.4;
+    color: @black;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -53,68 +67,82 @@
     width: 322px;
     flex-direction: column;
     align-self: flex-start;
+
     margin-top: 77px;
     margin-bottom: 0px;
 
     border: 1px solid @grayst;
   }
+
   .catalog-more__img {
     margin-top: 55px;
     margin-bottom: 75px;
   }
+
   .catalog-more__title {
     width: 150px;
     margin: 0 auto;
+
     font-size: 20px;
     font-height: 20px;
   }
+
   .catalog-more__deck {
     width: 180px;
-    font-size: 16px;
-    line-height: 18px;
+
     margin: 0 auto;
     margin-top: 25px;
     margin-bottom: 86px;
+
+    font-size: 16px;
+    line-height: 18px;
   }
 
   .catalog-more__button {
     width: 249px;
     margin: 0 auto;
+
     margin-bottom: 15px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-more {
-    width: 243px;
     flex-direction: column;
     align-self: flex-start;
+
+    width: 243px;
+
     margin-top: 77px;
     margin-bottom: 0px;
 
     border: 1px solid @grayst;
   }
+
   .catalog-more__img {
     margin-top: 55px;
     margin-bottom: 75px;
   }
+
   .catalog-more__title {
     width: 150px;
     margin: 0 auto;
+
     font-size: 20px;
     font-height: 20px;
   }
+
   .catalog-more__deck {
     width: 180px;
-    font-size: 16px;
-    line-height: 18px;
     margin: 0 auto;
     margin-top: 25px;
     margin-bottom: 86px;
+
+    font-size: 16px;
+    line-height: 18px;
   }
 
   .catalog-more__button {
     width: 175px;
   }
 }
-

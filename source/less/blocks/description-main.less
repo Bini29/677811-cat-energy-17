@@ -1,89 +1,97 @@
 .description-main {
+  text-align: center;
+
   background: no-repeat;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: center 0;
   background-size: auto 305px;
-  text-align: center;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("/img/index-background-mobile@2x.jpg");
       background-size: auto 305px;
-    }
+  }
 }
 
 .description-main__title-head {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
-  font-family: @use-font;
-  color: @white;
   margin: 0;
   padding: 0;
   padding-top: 26px;
+
+  font-family: @use-font;
+  color: @white;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
 }
 
 .description-main__title-text {
+  margin-top: 26px;
+  margin-bottom: 30px;
+
+  font-family: @use-font;
+  color: @white;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  font-family: @use-font;
-  color: @white;
-  margin-top: 26px;
   text-transform: uppercase;
-  margin-bottom: 30px;
 }
 
-.description-main__button{
-  width: 280px;
+.description-main__button {
   display: block;
-  padding-bottom: 10px;
+  width: 280px;
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 @media (min-width: @tablet-width) {
   .description-main {
-    background:none;
-    min-height: 600px;
-    position: relative;
+  position: relative;
 
+  min-height: 600px;
+
+  background: none;
   }
-  .description-main__title{
-    margin-left: 87px;
+
+  .description-main__title {
     max-width: 520px;
+    margin-left: 87px;
     padding-top: 30px;
   }
 
   .description-main__title-head {
-    text-align: left;
-    color: @black;
+    padding-top: 13px;
+
     font-size: 60px;
     line-height: 60px;
-    padding-top: 13px;
-  }
-
-  .description-main__title-text {
     text-align: left;
     color: @black;
-    font-size: 20px;
-    line-height: 20px;
+  }
+  .description-main__title-text {
     margin-top: 41px;
     margin-bottom: 46px;
 
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: @black;
   }
+
 
   .description-main__img {
     position: absolute;
-    bottom: 7px;
     right: 26px;
-    margin: 0 auto;
+    bottom: 7px;
     z-index: -1;
 
+    margin: 0 auto;
   }
+
   .description-main__button {
     width: 244px;
     margin-left: 88px;
     padding-top: 18px;
     padding-bottom: 18px;
+
     font-size: 20px;
   }
 }
@@ -115,26 +123,27 @@
   }
   .description-main__title-head {
     padding-top: 15px;
-
   }
 
   .description-main__title {
-    text-align: left;
     margin-top: 55px;
-   }
+    text-align: left;
+  }
 
   .description-main__title-text {
     margin-top: 35px;
-    text-transform: uppercase;
     margin-bottom: 55px;
+
+    text-transform: uppercase;
   }
+
 
   .description-main__img {
     position: absolute;
     top: -40px;
-    left: 18%;
     bottom: inherit;
-    margin: auto;
+    left: 18%;
 
+    margin: auto;
   }
 }

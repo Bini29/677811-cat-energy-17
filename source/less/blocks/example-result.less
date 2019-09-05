@@ -4,77 +4,88 @@
 }
 
 .example-result__item {
-  border: 1px solid @grayst;
-  border-radius: 5px;
   width: 122px;
 
-  &:nth-child(1){
+  border: 1px solid @grayst;
+  border-radius: 5px;
+
+  &:nth-child(1) {
     margin-right: 32px;
   }
 }
 
 .example-result__title {
   display: block;
+  margin-top: 15px;
+
+  font-family: @use-font;
+  color: @black;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  font-family: @use-font;
-  color: @black;
   text-align: center;
-  margin-top: 15px;
   text-transform: uppercase;
 }
 
-.example-result__text{
+.example-result__text {
+  display: block;
   width: 88px;
   margin: 0 auto;
-  display: block;
+  margin-top: 9px;
+  margin-bottom: -15px;
+
+  font-family: @deafult-font;
+  color: @black;
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
-  font-family: @deafult-font;
-  color: @black;
-  background-color:@gray--werylight;
   text-align: center;
-  margin-top: 9px;
-  margin-bottom: -15px;
-  &:nth-child(2){
+
+  background-color:@gray--werylight;
+
+  &:nth-child(2) {
   width: 60px;
   }
 }
 
-.example-result__exp{
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  font-family: @use-font;
-  color: @black;
-  text-transform: uppercase;
+.example-result__exp {
   margin: 0 auto;
   margin-top: 33px;
   margin-bottom: 38px;
 
+  font-family: @use-font;
+  color: @black;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
   .example-result {
     margin-bottom: 65px;
   }
+
   .example-result__title {
     font-size: 30px;
     line-height: 37px;
   }
+
   .example-result__text {
     width: 140px;
-    font-size: 14px;
-    line-height: 14px;
+
     margin-top: 15px;
     margin-bottom: -13px;
-    &:nth-child(2){
+
+    font-size: 14px;
+    line-height: 14px;
+
+    &:nth-child(2) {
       width: 140px;
     }
   }
-  .example-result__item{
+
+  .example-result__item {
     width: 166px;
     margin-bottom: 15px;
   }
@@ -90,23 +101,29 @@
     text-align: right;
   }
 }
+
 @media (min-width: @desktop-width) {
   .example-result {
-    background-color: @gray--werylight;
+    display: flex;
+    width: 430px;
+
     margin-bottom: 0px;
     padding-bottom: 65px;
-    width: 430px;
-    display: flex;
+
+
     flex-wrap: wrap;
+    background-color: @gray--werylight;
   }
 
   .example-result__exp {
-    margin: 0;
     width: 100%;
-    text-align: left;
+    margin: 0;
     margin-top: 45px;
- }
- .example-result__prise {
+
+    text-align: left;
+  }
+
+  .example-result__prise {
     margin-left: 65px;
- }
+  }
 }
