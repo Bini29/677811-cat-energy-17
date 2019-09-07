@@ -1,5 +1,9 @@
 .program-select {
+  overflow-x: hidden;
+}
 
+.program-select__form__och {
+  outline: 1px 1px 1px 1px red;
 }
 
 .program-select__title {
@@ -33,10 +37,6 @@
 
   font-size: 16px;
   line-height: 20px;
-}
-
-.program-select__send {
-
 }
 
 .program-select__field {
@@ -97,25 +97,21 @@
 
 
 @media (min-width: @desktop-width) {
-  .program-select {
-
-  }
-
   .program-select__title {
     margin-top: 60px;
     margin-bottom: 59px;
   }
 
   .program-select__text {
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .program-select__form {
     display: flex;
     flex-wrap: wrap;
 
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .program-select__button {

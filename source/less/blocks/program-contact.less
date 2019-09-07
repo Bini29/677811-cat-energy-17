@@ -1,6 +1,7 @@
 .program-contact {
-  padding: 0px;
-
+  width: 100%;
+  padding: 0;
+  margin: 0;
   border: none;
 }
 
@@ -21,10 +22,10 @@
 
   background-color: @white;
 
-  &:before {
-    content:"";
+  &::before {
+    content: "";
     position: absolute;
-    top:15px;
+    top: 15px;
     left: 200px;
 
     width: 100vw;
@@ -36,7 +37,6 @@
 .program-contact__text {
   flex-shrink: 0;
   margin-right: 10px;
-
 }
 
 .program-contact__input {
@@ -55,6 +55,7 @@
   &:focus {
     outline: 1px solid @input-color--active;
   }
+
   &:hover {
     border: 1px solid @gray-light;
   }
@@ -67,8 +68,8 @@
   align-items: center;
   margin-bottom: 15px;
 
-  &:before{
-    content:"";
+  &::before {
+    content: "";
     position: absolute;
     width: 20px;
     height: 20px;
@@ -76,35 +77,35 @@
 }
 
 .program-contact__label--email {
-
-  &:before{
+  &::before {
     content: "";
     top: 16px;
     right: 13px;
 
-    background:no-repeat;
-    background-image: url(../img/icon-mail.svg);
+    background: no-repeat;
+    background-image: url("../img/icon-mail.svg");
     background-size: 17px 13px;
   }
 }
 
 .program-contact__label--mob {
-
-  &:before{
-    content:"";
+  &::before {
+    content: "";
     top: 12px;
     right: 13px;
-    background:no-repeat;
-    background-image: url(../img/icon-phone.svg);
+    background: no-repeat;
+    background-image: url("../img/icon-phone.svg");
     background-size: 20px 20px;
   }
 }
 
 @media (min-width: @tablet-width) {
-
   .program-contact__input {
     width: 100%;
     padding: 10px 20px;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .program-contact__title {
@@ -114,13 +115,13 @@
     font-size: 36px;
     line-height: 36px;
 
-    &:before {
+    &::before {
       height: 3px;
       top: 22px;
       left: 552px;
     }
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       top: 21px;
@@ -144,27 +145,25 @@
   .program-contact__label {
     margin-bottom: 20px;
   }
-
-  .program-contact__input {
-    font-size: 20px;
-    line-height: 20px;
-  }
 }
 
 @media (min-width: @desktop-width) {
+  .program-contact__cont {
+    width: 100%;
+    display: flex;
+  }
 
   .program-contact__title {
-    margin-right: 50%;
-    margin-top: 0px;
+    margin-top: 0;
 
-    &:before {
+    &::before {
       height: 3px;
 
       top: 20px;
       left: 552px;
     }
 
-    &:after {
+    &::after {
       top: 20px;
       left: -70px;
 
@@ -180,7 +179,8 @@
 
   .program-contact__label {
     width: 570px;
-    &:nth-child(2n) {
+
+    &:nth-child(1n) {
       margin-right: auto;
     }
   }

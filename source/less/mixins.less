@@ -8,29 +8,33 @@
   text-decoration: none;
   background-color: @green;
   border: none;
+
   &:hover {
-    background-color:@green--darker;
+    background-color: @green--darker;
   }
+
   &:active {
-    background-color:@green--darker;
+    background-color: @green--darker;
     color: @green--dark;
   }
 }
-.program-text{
+
+.program-text {
+  font-family: @use-font;
+  color: @black;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  font-family: @use-font;
-  color: @black;
   text-transform: uppercase;
 }
+
 .program-title {
+  font-family: @use-font;
+  color: @black;
   display: inline-block;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  font-family: @use-font;
-  color: @black;
 }
 
 .wrapper {
@@ -39,6 +43,7 @@
   padding-right: 20px;
   padding-left: 20px;
 }
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -57,7 +62,6 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-
 @media (min-width: @tablet-width) {
   .wrapper {
     width: 708px;
@@ -66,13 +70,13 @@ input[type="radio"].visually-hidden {
   }
 
   .program-title {
-  font-size: 36px;
-  line-height: 36px;
+    font-size: 36px;
+    line-height: 36px;
   }
 
   .active-link {
     padding-bottom: 5px;
-    border-bottom:2px solid @green;
+    border-bottom: 2px solid @green;
   }
 }
 
@@ -85,11 +89,12 @@ input[type="radio"].visually-hidden {
 
   .active-link {
     padding-bottom: 10px;
-    border-bottom:2px solid @white;
+    border-bottom: 2px solid @white;
   }
+
   .active-link--green {
     padding-bottom: 6px;
-    border-bottom:2px solid @green;
+    border-bottom: 2px solid @green;
   }
 }
 
