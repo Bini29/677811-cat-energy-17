@@ -10,6 +10,7 @@
   &:hover {
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.4;
   }
@@ -32,11 +33,6 @@
     border-bottom: 1px solid @grayst;
   }
 }
-
-.navgation__list-item {
-
-}
-
 
 .navgation {
   text-align: center;
@@ -63,7 +59,7 @@
 
   position: absolute;
   top: 4px;
-  left: 0px;
+  left: 0;
 
   width: 25px;
   height: 2px;
@@ -87,7 +83,7 @@
 
     position: absolute;
     top: 12px;
-    left: 0px;
+    left: 0;
 
     width: 25px;
     height: 2px;
@@ -114,20 +110,23 @@
   .navgation__list {
     flex-direction: row;
   }
-  .navgation{
+
+  .navgation {
     margin-left: auto;
 
     li {
       margin-top: 45px;
       padding-left: 36px;
-      padding-bottom: 0px;
+      padding-bottom: 0;
       border: none;
     }
   }
-  .navgation__toggle{
+
+  .navgation__toggle {
     display: none;
   }
-  .navgation__list-link{
+
+  .navgation__list-link {
     font-weight: 400;
     font-size: 18px;
   }
@@ -135,16 +134,17 @@
 
 @media (min-width: @desktop-width) {
   .navgation__list {
-
     li {
       margin-top: 75px;
       padding-left: 34px;
     }
   }
+
   .navgation__list-link {
     font-size: 20px;
     color: @white;
   }
+
   .navgation__list-link--black {
     color: @black;
   }
@@ -154,8 +154,8 @@
   .navgation--closed .navgation__list li {
     display: none;
   }
+
   .navgation--nojs .navgation__toggle {
     display: none;
   }
-
 }

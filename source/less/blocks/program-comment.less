@@ -1,8 +1,8 @@
 .program-comment {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 
-  border:none;
+  border: none;
 }
 
 .program-comment__title {
@@ -10,10 +10,10 @@
   margin-top: 11px;
   margin-bottom: 34px;
 
-  &:before {
-    content:"";
+  &::before {
+    content: "";
     position: absolute;
-    top:15px;
+    top: 15px;
     left: 145px;
 
     width: 100vw;
@@ -49,14 +49,14 @@
     margin-top: 45px;
     margin-bottom: 77px;
 
-    &:before {
+    &::before {
       top: 22px;
       left: 220px;
 
       height: 3px;
     }
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       top: 21px;
@@ -76,13 +76,14 @@
   .program-comment__title {
     margin-top: 47px;
 
-    &:before {
+    &::before {
       top: 20px;
 
       left: 220px;
       height: 3px;
     }
-    &:after {
+
+    &::after {
       top: 20px;
       left: -70px;
 

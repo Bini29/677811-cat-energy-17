@@ -17,13 +17,23 @@
 
   border: 1px solid @grayst;
 
-    &:active,
-    &:focus {
-      outline: 1px solid @input-color--active;
-    }
+  &:active,
+  &:focus {
+    outline: 1px solid @input-color--active;
+  }
 
-    &:hover {
-      border: 1px solid @gray-light;
+  &:hover {
+    border: 1px solid @gray-light;
+  }
+
+  &:required:focus {
+    outline: 1px solid @input-color--active;
+    border-color: @gray-light;
+  }
+
+  &:required:invalid:focus {
+    outline: 0 solid @input-color--active;
+    border-color: red;
   }
 }
 
@@ -73,9 +83,10 @@
     margin-bottom: 49px;
   }
 
-  .program-cat-info__info{
+  .program-cat-info__info {
     margin-bottom: 19px;
   }
+
   .program-cat-info__input {
     padding: 10px 20px;
 
