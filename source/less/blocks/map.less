@@ -1,9 +1,34 @@
 .map {
   background-image: url("../img/bg-map-mobile@1x.png");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
+}
+
+.map_ifr {
+  width: 100%;
+  height: 390px;
 }
 
 @media (min-width: @tablet-width) {
   .map {
     height: 400px;
+    background-image: url("../img/bg-map-tablet@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    height: 400px;
+    background-image: url("../img/bg-map-desktop@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
   }
 }
