@@ -19,7 +19,7 @@
 }
 
 .program-choice__input {
-  &:checked + label {
+  &:disabled + label {
     opacity: 0.4;
   }
 
@@ -52,7 +52,8 @@
 
 @media (min-width: @tablet-width) {
   .program-choice {
-    padding-bottom: 10px;
+    padding-bottom: 8px;
+    padding-top: 27px;
 
     border: 1px solid @grayst;
   }
@@ -70,16 +71,16 @@
 
   .program-choice__input {
     & + label::before {
-      top: -4px;
-      left: 27px;
+      top: -6px;
+      left: 25px;
 
       width: 40px;
       height: 40px;
     }
 
     &:checked + label::after {
-      top: 10px;
-      left: 40px;
+      top: 6px;
+      left: 37px;
 
       width: 18px;
       height: 18px;

@@ -1,3 +1,8 @@
+.example-cat {
+  padding-bottom: 35px;
+  margin-bottom: 5px;
+}
+
 .example-cat__befago {
   position: relative;
 
@@ -53,6 +58,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .example-cat {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
   .example-cat__text {
     font-size: 20px;
     line-height: 20px;
@@ -78,10 +88,10 @@
       right: 47%;
       z-index: 1;
 
-      width: 5px;
-      height: 5px;
+      width: 8px;
+      height: 8px;
 
-      border: 15px solid @white;
+      border: 11px solid @white;
       box-shadow: 0 0 5 @grayst;
       background-color: @green;
       border-radius: 50%;
@@ -112,8 +122,8 @@
 @media (min-width: @desktop-width) {
   .example-cat {
     position: absolute;
-    top: -55px;
-    right: 140px;
+    top: -45px;
+    right: 115px;
   }
 
   .example-cat__befago {
