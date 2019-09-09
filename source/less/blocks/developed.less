@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  padding-top: 10px;
 
   text-decoration: none;
   color: @gray;
+  border-top: 1px solid @grayst;
 
   &:hover {
     color: @green;
@@ -35,6 +36,8 @@
 @media (min-width: @tablet-width) {
   .developed {
     margin-top: -30px;
+
+    border: none;
   }
 
   .developed__text {

@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+    <div style="display:none">
+      <include src="source/img/sprite.svg"></include>
+    </div>
     <header class="page-header wrapper">
       <a class="logo page-header__logo">
         <picture>
@@ -31,9 +35,10 @@
         <article class="catalog-item">
           <a class="catalog-item__img" href="#">
             <picture>
-              <source type="image/webp" media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x_web.webp 1x, img/chicken-small-desktop@2x_web.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x_web.webp 1x, img/chicken-small-tablet@2x_web.webp 2x">
-              <source type="image/webp" srcset="img/chicken-small-mobile@1x_web.webp 1x,chicken-small-mobile@2x_web.webp 2x">
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/chicken-small-desktop@1x.webp 1x,img/webp/chicken-small-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/chicken-small-tablet@1x.webp 1x,img/webp/chicken-small-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/chicken-small-mobile@1x.webp 1x,img/webp/chicken-small-mobile@2x.webp 2x">
+
               <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
               <img  src="img/chicken-small-mobile@1x.jpg" srcset="img/chicken-small-mobile@2x.jpg 2x" alt="Курица">
@@ -61,12 +66,12 @@
         <article class="catalog-item">
           <a class="catalog-item__img" href="#">
             <picture>
-              <source type="image/webp" media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x_web.webp 1x, img/chicken-big-desktop@2x.png 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x_web.webp 1x, img/chicken-big-tablet@2x.png 2x">
-              <source type="image/webp" srcset="img/chicken-big-mobile@1x_web.webp 1x,chicken-big-mobile@2x_web.webp 2x">
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/chicken-big-desktop@1x.webp 1x,img/webp/chicken-big-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/chicken-big-tablet@1x.webp 1x,img/webp/chicken-big-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/chicken-big-mobile@1x.webp 1x,img/webp/chicken-big-mobile@2x.webp 2x">
               <source media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
-              <img src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x_web.webp 2x" alt="PRO 500">
+              <img src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x" alt="PRO 500">
             </picture>
           </a>
           <div class="catalog-item__diskr">
@@ -91,9 +96,9 @@
         <article class="catalog-item">
           <a class="catalog-item__img" href="#">
             <picture>
-              <source type="image/webp" media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x_web.webp 1x, img/fish-small-desktop@2x_web.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/fish-small-tablet@1x_web.webp 1x, img/fish-small-tablet@2x_web.webp 2x">
-              <source type="image/webp" srcset="img/fish-small-mobile@1x_web.webp 1x,fish-small-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/fish-small-desktop@1x.webp 1x,img/webp/fish-small-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/fish-small-tablet@1x.webp 1x,img/webp/fish-small-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/fish-small-mobile@1x.webp 1x,img/webp/fish-small-mobile@2x.webp 2x">
               <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
               <img src="img/fish-small-mobile@1x.jpg" srcset="img/fish-small-mobile@2x.jpg 2x" alt="PRO 500">
@@ -121,9 +126,9 @@
         <article class="catalog-item">
           <a class="catalog-item__img" href="#">
             <picture>
-              <source type="image/webp" media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x_web.webp 1x, img/fish-big-desktop@2x_web.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/fish-big-tablet@1x_web.webp 1x, img/fish-big-tablet@2x_web.webp 2x">
-              <source type="image/webp" srcset="img/fish-big-mobile@1x_web.webp 1x,fish-big-mobile@2x_web.webp 2x">
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/fish-big-desktop@1x.webp 1x,img/webp/fish-big-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/fish-big-tablet@1x.webp 1x,img/webp/fish-big-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/fish-big-mobile@1x.webp 1x,img/webp/fish-big-mobile@2x.webp 2x">
               <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
               <img src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" alt="PRO 500">
@@ -151,9 +156,9 @@
         <article class="catalog-item">
           <a class="catalog-item__img" href="#">
             <picture>
-              <source type="image/webp" media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x_web.webp 1x, img/buckwheat-small-desktop@2x_web.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x_web.webp 1x, img/buckwheat-small-tablet@2x_web.webp 2x">
-              <source type="image/webp" srcset="img/buckwheat-small-mobile@1x_web.webp 1x,buckwheat-small-mobile@2x_web.webp 2x">
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/buckwheat-small-desktop@1x.webp 1x,img/webp/buckwheat-small-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/buckwheat-small-tablet@1x.webp 1x,img/webp/buckwheat-small-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/buckwheat-small-mobile@1x.webp 1x,img/webp/buckwheat-small-mobile@2x.webp 2x">
               <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
               <img src="img/buckwheat-small-mobile@1x.jpg" srcset="img/buckwheat-small-mobile@2x.jpg 2x" alt="гречка">
@@ -181,9 +186,9 @@
         <article class="catalog-item">
           <a class="catalog-item__img" href="#">
             <picture>
-              <source type="image/webp" media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x_web.webp 1x, img/buckwheat-big-desktop@2x_web.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x_web.webp 1x, img/buckwheat-big-tablet@2x_web.webp 2x">
-              <source type="image/webp" srcset="img/buckwheat-big-mobile@1x_web.webp 1x,buckwheat-big-mobile@2x_web.webp 2x">
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/buckwheat-big-desktop@1x.webp 1x,img/webp/buckwheat-big-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/buckwheat-big-tablet@1x.webp 1x,img/webp/buckwheat-big-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/buckwheat-big-mobile@1x.webp 1x,img/webp/buckwheat-big-mobile@2x.webp 2x">
               <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
               <img src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x" alt="гречка">
@@ -212,9 +217,9 @@
           <div class="catalog-item__img">
             <a class="catalog-item__img" href="#">
               <picture>
-                <source type="image/webp" media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x_web.webp 1x, img/rice-small-desktop@2x_web.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/rice-small-tablet@1x_web.webp 1x, img/rice-small-tablet@2x_web.webp 2x">
-                <source type="image/webp" srcset="img/rice-small-mobile@1x_web.webp 1x,rice-small-mobile@2x_web.webp 2x">
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/rice-small-desktop@1x.webp 1x,img/webp/rice-small-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/rice-small-tablet@1x.webp 1x,img/webp/rice-small-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/rice-small-mobile@1x.webp 1x,img/webp/rice-small-mobile@2x.webp 2x">
                 <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
                 <img src="img/rice-small-mobile@1x.jpg" srcset="img/rice-small-mobile@2x.jpg 2x" alt="Рис">
@@ -287,7 +292,7 @@
         <div class="catalog-gift">
           <div class="catalog-gift__item">
             <svg class="catalog-gift__img" width="55" height="60">
-              <use xlink:href="img/sprite.svg#gift"></use>
+              <use xlink:href="#icon-gift"></use>
             </svg>
             <p class="catalog-gift__text">Закажите все<br>и получите чехол для кота в подарок!</p>
           </div>
@@ -316,30 +321,30 @@
         <ul class="social">
           <li>
             <a class="social__link" href="#">
-              <svg class="social__icon social__icon--vk" width="22" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <use xlink:href="img/sprite.svg#vk-icon"></use>
+              <svg class="social__icon social__icon--vk" width="22" height="12" fill="currentColor">
+                <use xlink:href="#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li>
             <a class="social__link" href="#">
-              <svg class="social__icon social__icon--inst" width="16" height="16">
-                <use xlink:href="img/sprite.svg#inst-icon"></use>
+              <svg class="social__icon social__icon--inst" width="16" height="16" fill="currentColor">
+                <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li>
             <a class="social__link" href="#">
-              <svg class="social__icon social__icon--fb" width="10" height="19">
-                <use xlink:href="img/sprite.svg#fb-icon"></use>
+              <svg class="social__icon social__icon--fb" width="10" height="19" fill="currentColor">
+                <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
         </ul>
         <a class="developed" href="https://htmlacademy.ru/intensive/adaptive">
           <h3 class="developed__text">HTML Academy</h3>
-          <svg width="27" height="34">
-            <use xlink:href="img/sprite.svg#html-icon"></use>
+          <svg width="27" height="34" fill="currentColor">
+            <use xlink:href="#icon-htmlacademy"></use>
           </svg>
         </a>
       </div>
